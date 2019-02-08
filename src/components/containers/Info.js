@@ -1,0 +1,1 @@
+// fichier qui gère les states, avec mapState to props et dispatchStateToProps
