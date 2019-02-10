@@ -1,3 +1,8 @@
+@font-face{
+    font-family: 'marvel';
+    src: url('../font/avengeance/AVENGEANCE\ HEROIC\ AVENGER.ttf')
+}
+
 .loader {
     margin-top:5%;
 }
@@ -8,17 +13,24 @@
     max-width:200px;
 }
 
-.picture-card:hover {
+.card-container:hover{
+    background-color: red;
+
+
 }
 
 .character-title {
     text-align: center;
-    font-size: calc(1.3vh + 1.3vw);
+    font-size: calc(2vh + 2vw);
+    font-family: 'marvel';
+    letter-spacing: 3px;
 }
 
 .picture-card {
     width:200px;
     height:200px;
+    clip-path: polygon(0 0, 100% 0, 80% 80%, 0 100%);
+
 }
 
 .text-card{

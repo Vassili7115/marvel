@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Header from './components/Header';
-import DisplayCharacters from './components/DisplayCharacters';
+import DisplayCharactersContainer from './components/DisplayCharactersContainer';
 import Home from './components/Home';
 import Page404 from './components/Page404';
 
@@ -17,7 +17,7 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home}/>
-          <Route path="/characters" component={DisplayCharacters}/>
+          <Route path="/characters" component={DisplayCharactersContainer}/>
           {/* <Route path="/Series" component={DisplaySeries}/> */}
           <Route component={Page404}/>
         </Switch>
