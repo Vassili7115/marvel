@@ -37,3 +37,5 @@ export const getList = () => disptach => {
     .then(data => disptach(getListSuccessed(data.data)))
     .catch(err => disptach(getListError(err)));
 };
+
+

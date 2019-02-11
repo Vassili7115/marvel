@@ -8,12 +8,11 @@ class Header extends Component {
                 <div className="logo-container">
                     <img className="logo-header" src="/images/logo-marvel-studios.png" alt="marvel-logo"/>
                 </div>
-
                 <div className="menu-container">
                     <a href="/">Home</a>
                     <a href="/characters">Characters</a>
-                    <a href="/series">Series</a>
                     <a href="/comics">Comics</a>
+                    <a href="/series">Series</a>
                 </div>
             </div>
         )
