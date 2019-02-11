@@ -6,7 +6,7 @@ class Header extends Component {
         return(
             <div className="header-container">
                 <div className="logo-container">
-                    <img className="logo-header" src="/images/logo-marvel-studios.png" alt="marvel-logo"/>
+                    <a href="/"><img className="logo-header" src="/images/logo-marvel-studios.png" alt="marvel-logo"/></a>
                 </div>
                 <div className="menu-container">
                     <a href="/">Home</a>

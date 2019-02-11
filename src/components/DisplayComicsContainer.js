@@ -6,7 +6,7 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 
 
 import Grid from '@material-ui/core/Grid';
-import '../stylesheets/displayCharacters.scss'
+import '../stylesheets/DisplayComicsContainer.scss'
 
 class DisplayComicsContainer extends Component {
 
@@ -23,14 +23,15 @@ class DisplayComicsContainer extends Component {
 
     return(
         <div>
-          {/* <DisplayCharacters/> */}
-        <Grid container className="container-display-characters">
-          <Grid item xs={12}>
-            <h1 className="character-title">Comics</h1>
+        <Grid container className="container-display-comics">
+            <Grid item xs={12}>
+              <h1 className="comics-title">Comics</h1>
+            </Grid> 
+            <Grid>
+            {/* {characters.map((character) => <Grid>{character.comics.collectionURI}</Grid>)} */}
+            {characters.map((character,index) => <Grid className="comics-title-container" key={index}>{character.comics.items.map((item,index) => <Grid key={index}>{item.name}</Grid>)}</Grid>)}
           </Grid> 
-          {/* {characters.map((character) => <Grid>{character.comics.collectionURI}</Grid>)} */}
-          {characters.map((character,index) => <Grid key={index}>{character.comics.items.map((item,index) => <Grid key={index}>{item.name}</Grid>)}</Grid>)}
-        </Grid> 
+        </Grid>
       </div>
     );
   }

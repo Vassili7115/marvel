@@ -1,0 +1,22 @@
+@font-face{
+    font-family: 'marvel';
+    src: url('../font/avengeance/AVENGEANCE\ HEROIC\ AVENGER.ttf')
+}
+
+.container-display-comics {
+    justify-content: center;
+}
+
+
+.comics-title {
+    text-align: center;
+    font-size: calc(2vh + 2vw);
+    font-family: 'marvel';
+    letter-spacing: 3px;
+    margin-top:4%;
+}
+
+.comics-title-container {
+    margin: 10% 0;
+    text-align: center;
+}

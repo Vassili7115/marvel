@@ -28,7 +28,6 @@ class DisplayCharactersContainer extends Component {
 
     return(
         <div>
-
           {/* <DisplayCharacters/> */}
         <Grid container className="container-display-characters">
           <Grid item xs={12}>
@@ -36,11 +35,11 @@ class DisplayCharactersContainer extends Component {
           </Grid>
             {characters.map((character) =>        
           <Grid className="card-container" item key={character.id}>
-            <img className="picture-card" src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name}/>
+            <img className="picture-card" src={`${character.thumbnail.path}/portrait_uncanny.${character.thumbnail.extension}`} alt={character.name}/>
             <p className="text-card">{character.name.split(parenthese)}</p>
           </Grid>
             )}
-            </Grid>
+          </Grid>
       </div>
     );
   }
