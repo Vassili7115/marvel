@@ -29,7 +29,8 @@ export const getList = () => disptach => {
   const ts = Date.now();
   const hash = md5(ts + API_PRIVATE_KEY + API_PUBLIC_KEY);
   const options = `characters`;
-  const url = `https://gateway.marvel.com/v1/public/${options}?apikey=${process.env.REACT_APP_API_PUBLIC_KEY}&hash=${hash}&ts=${ts}`;
+  const limit = 20;
+  const url = `https://gateway.marvel.com/v1/public/${options}?apikey=${API_PUBLIC_KEY}&hash=${hash}&ts=${ts}&limit=${limit}`;
   disptach(getListPending());
   fetch(url)
     .then(res => res.json())
