@@ -3,19 +3,20 @@
     src: url('../font/avengeance/AVENGEANCE\ HEROIC\ AVENGER.ttf')
 }
 
-.loader {
-    margin-top:5%;
+.container-display-characters {
+    justify-content: center;
 }
 
 .card-container {
-    background-color: grey;
+    background-color: #222629;
     margin:1% !important;
     max-width:200px;
 }
 
 .card-container:hover{
-    background-color: red;
-
+    background-color: rgb(249, 0, 12);
+    cursor: pointer;
+    transform: translate(0, -3px);
 
 }
 
@@ -29,12 +30,12 @@
 .picture-card {
     width:200px;
     height:200px;
-    clip-path: polygon(0 0, 100% 0, 80% 80%, 0 100%);
-
+    clip-path: polygon(0 0, 100% 0, 70% 95%, 0 100%);
 }
 
 .text-card{
     color: white;
-    text-align: center;
-    font-size: calc(0.6vh + 0.6vw);
+    text-align:end;
+    margin-right:6%;
+    font-size: calc(0.8vh + 0.8vw);
 }

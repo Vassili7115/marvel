@@ -1,9 +1,21 @@
-.home-background{
-    width:100vw;
-    opacity:0.4;
-    position:relative;
+.home-container {
+    background-image: url('/images/espace.jpg');
+    height:100vh;
+    opacity:0.8;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
-// .home-text{
-//     text-align: center;
-// }
+
+.home-title{
+    margin-top:0;
+    padding-top:20%;
+    text-align: center;
+    color: white;
+}
+
+.home-text {
+    text-align: center;
+    color: white;
+    font-size: calc(0.8vh + 0.8vw)
+}

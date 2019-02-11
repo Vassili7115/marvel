@@ -10,7 +10,6 @@ import Grid from '@material-ui/core/Grid';
 import '../stylesheets/displayCharacters.scss'
 
 
-
 class DisplayCharactersContainer extends Component {
 
 componentDidMount() {
@@ -21,17 +20,21 @@ componentDidMount() {
     console.log("1 :", this.props.characters)
     const { characters } = this.props
 
-    if (this.props.characters === null) return <LinearProgress className="loader" />
+
+    //regex to delete text between parentheses
+    const parenthese = /\(+\)/;
+
+    if (characters === null) return <LinearProgress />
     return(
         <div>
-        <Grid container>
+        <Grid container className="container-display-characters">
           <Grid item xs={12}>
             <h1 className="character-title">Characters</h1>
           </Grid>
-            {characters.map((character) =>
+            {characters.map((character) =>        
           <Grid className="card-container" item key={character.id}>
             <img className="picture-card" src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={character.name}/>
-            <p className="text-card">{character.name.replace('(','').replace(')','')}</p>
+            <p className="text-card">{character.name.split(parenthese)}</p>
           </Grid>
             )}
             </Grid>
