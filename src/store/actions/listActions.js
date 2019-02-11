@@ -1,9 +1,9 @@
-// import * as types from "./types";
+import { FETCH_PENDING, FETCH_SUCCESSED, FETCH_ERROR } from "./typesActions";
 import md5 from 'md5';
 
-export const FETCH_PENDING = "FETCH_PENDING";
-export const FETCH_SUCCESSED = "FETCH_SUCCESSED";
-export const FETCH_ERROR = "FETCH_ERROR";
+
+//import des constant (api keys)
+import { API_PUBLIC_KEY, API_PRIVATE_KEY } from '../../constant/apiKey'
 
 const getListPending = () => {
   return {
@@ -27,7 +27,7 @@ const getListError = error => {
 
 export const getList = () => disptach => {
   const ts = Date.now();
-  const hash = md5(ts + process.env.REACT_APP_API_PRIVATE_KEY + process.env.REACT_APP_API_PUBLIC_KEY);
+  const hash = md5(ts + API_PRIVATE_KEY + API_PUBLIC_KEY);
   const options = `characters`;
   const url = `https://gateway.marvel.com/v1/public/${options}?apikey=${process.env.REACT_APP_API_PUBLIC_KEY}&hash=${hash}&ts=${ts}`;
   disptach(getListPending());

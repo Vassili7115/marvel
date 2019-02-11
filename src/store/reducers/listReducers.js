@@ -1,4 +1,4 @@
-import * as types from "../actions/listActions";
+import * as types from "../actions/typesActions";
 
 const initialState = {
     loading: false,
