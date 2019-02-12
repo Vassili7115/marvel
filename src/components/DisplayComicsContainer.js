@@ -29,7 +29,7 @@ class DisplayComicsContainer extends Component {
             </Grid> 
             <Grid>
             {/* {characters.map((character) => <Grid>{character.comics.collectionURI}</Grid>)} */}
-            {characters.map((character,index) => <Grid className="comics-title-container" key={index}>{character.comics.items.map((item,index) => <Grid key={index}>{item.name}</Grid>)}</Grid>)}
+            {characters.map((character,index) => <Grid className="comics-title-container" key={index}>{character.comics.items.map((item,index) => <Grid key={index}> <div><img className="comics-cover" src ="/images/comics.jpg" alt="comics cover"/></div> {item.name}</Grid>)}</Grid>)}
           </Grid> 
         </Grid>
       </div>

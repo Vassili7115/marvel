@@ -17,12 +17,10 @@ class DisplayCharactersContainer extends Component {
 }
 
   render() {
-    console.log("container :", this.props)
     const { characters } = this.props
 
-
     //regex to delete text between parentheses
-    const parenthese = /\(+\)/;
+    const parenthese = /\(.+\)/g;
 
     if (characters === null) return <LinearProgress />
 

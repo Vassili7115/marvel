@@ -11,6 +11,7 @@
     background-color: #222629;
     margin:1% !important;
     max-width:200px;
+    box-shadow: 0px 2px 15px black;
 }
 
 .card-container:hover{
@@ -23,7 +24,9 @@
 .character-title {
     text-align: center;
     font-size: calc(2vh + 2vw);
+    color: rgb(239, 239, 239);
     font-family: 'marvel';
+    text-shadow: 0px 2px 15px red;
     letter-spacing: 3px;
     margin-top:4%;
 }
@@ -31,12 +34,12 @@
 .picture-card {
     width:200px;
     height:200px;
-    clip-path: polygon(0 0, 100% 0, 70% 95%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
 }
 
 .text-card{
     color: white;
     text-align:end;
     margin-right:6%;
-    font-size: calc(0.8vh + 0.8vw);
+    font-size: calc(0.9vh + 0.9vw);
 }
