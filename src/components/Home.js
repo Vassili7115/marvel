@@ -5,19 +5,23 @@ import '../stylesheets/home.scss'
 const Home = () => {
     return(
         <div>
-            <div class="container">
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>  
+            <div className="container">
+                <div className="item"></div>
+                <div className="item"></div>
+                <div className="item"></div>
+                <div className="item"></div>
+                <div className="item">            
+                    <div className="text-box">
+                        <a href="/characters">
+                        <span className="text">DISCOVER MARVEL</span>
+                    </a>
+                    </div>
+                </div>
+                <div className="item"></div>
+                <div className="item"></div>
+                <div className="item"></div>  
             </div>
-            <div class="text-box">
-                    <span class="text">DISCOVER MARVEL</span>
-            </div>
+
         </div>
     )
 }

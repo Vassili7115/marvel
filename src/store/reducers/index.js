@@ -1,8 +1,9 @@
-import { combineReducers } from "redux";
-import fecthReducers from "./listReducers";
+import { combineReducers } from 'redux';
+import listReducers from './listReducers';
 
 const rootReducer = combineReducers({
-  fetch: fecthReducers,
+  fetchCharacters: listReducers,
+  fetchComics: listReducers,
 });
 
 export default rootReducer;
