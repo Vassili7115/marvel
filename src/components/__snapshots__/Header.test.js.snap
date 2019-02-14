@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="header-container"
+>
+  <div
+    className="logo-container"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="marvel-logo"
+        className="logo-header"
+        src="/images/logo-marvel-studios.png"
+      />
+    </a>
+  </div>
+  <div
+    className="menu-container"
+  >
+    <a
+      href="/"
+    >
+      Home
+    </a>
+    <a
+      href="/characters"
+    >
+      Characters
+    </a>
+    <a
+      href="/comics"
+    >
+      Comics
+    </a>
+    <a
+      href="/series"
+    >
+      Series
+    </a>
+  </div>
+</div>
+`;

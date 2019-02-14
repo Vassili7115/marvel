@@ -1,5 +1,4 @@
-$color-grey: #222629;
-$color-white: rgb(255, 255, 255);
+@import './rules/color', './rules/font.scss', './rules/spaces.scss';
 
 @font-face{
     font-family: 'din';
@@ -7,7 +6,7 @@ $color-white: rgb(255, 255, 255);
 }
 
 .header-container{
-    background-color: $color-grey;
+    background-color: $primary;
 }
 
 .logo-container{
@@ -26,11 +25,12 @@ $color-white: rgb(255, 255, 255);
     a{
         height:100%;
         text-decoration: none;
-        color: white;
+        color: $tertiary;
         margin: 0 3%;
+        font-family: 'din';
         font-size: calc(0.8vh + 0.8vw);
     }
     a:hover{
-        border-bottom: 3px solid rgb(249, 0, 12)
+        border-bottom: 3px solid $secondary;
     }
 }

@@ -1,0 +1,43 @@
+@import './rules/color', './rules/font.scss', './rules/spaces.scss';
+
+.container-display-comics {
+    justify-content: center;
+}
+
+.container-comics-picture {
+    position: relative;
+}
+
+.comics-title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: calc(2vh + 2vw);
+    color: $tertiary;
+    font-family: 'marvel';
+    letter-spacing: 3px;
+    margin-top:4%;
+}
+
+.comics-picture {
+    height: 70%;
+    width: 100vw;
+}
+
+.comics-card {
+    text-align: center;
+}
+
+.comics-cover-title {
+    color: $primary;
+    font-size: calc(0.7vh + 0.7vw);
+    font-weight: bold;
+}
+
+.comics-cover {
+    box-shadow: 0 26px 24px -15px rgba(0,0,0,0.5);
+    max-width: 250px;
+    max-height:320px;
+}
