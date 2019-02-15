@@ -4,6 +4,12 @@ import DisplayCharactersPresentational from '../presentational/DisplayCharacters
 
 const mapStateToProps = state => ({
   characters: state.fetchCharacters.characters,
+  // characters: {
+  //   results: state.fetchCharacters.characters,
+  //   current: state.fetchCharacters.characters,
+  //   nbElement: state.fetchCharacters.characters,
+  //   nbTotalElement: state.fetchCharacters.characters,
+  // },
 });
 
 const mapDispatchToProps = dispatch => ({ getList: option => dispatch(getList(option)) });

@@ -1,31 +1,34 @@
 import React from 'react';
-// import Enzyme, { shallow, mount } from "enzyme";
-import renderer from 'react-test-renderer';
+import { mount, configure } from 'enzyme';
+// import renderer from 'react-test-renderer';
+import Adapter from 'enzyme-adapter-react-16';
 import DisplayCharactersPresentational from './DisplayCharactersPresentational';
-// import { getList } from "../../store/actions/listActions.js"
-// import Adapter from "enzyme-adapter-react-16";
+
+configure({ adapter: new Adapter() });
+
+
+const props = {
+  characters: [{
+    id: '1',
+    name: 'Iron Man',
+    thumbnail: {
+      path: 'https://www.ludoviccareme.com/files/image_211_image_fr',
+      extension: 'jpg',
+    },
+  }],
+  getList: jest.fn(),
+};
 
 describe('DisplayCharactersPresentational component', () => {
-// test("renders", () => {
-//     const wrapper = shallow(<DisplayCharactersPresentational />);
-//     expect(wrapper.exists()).toBe(true)
-// });
-it('renders correctly', () => {
-    // const propsBis = {
-    //     ...props,
-    //     characters: []
-    // };
-    const characters = [{
-      id: '1',
-      name: 'Iron Man',
-      thumbnail: {
-        path: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Poster-sized_portrait_of_Barack_Obama.jpg/450px-Poster-sized_portrait_of_Barack_Obama.jpg',
-        extension: 'jpg',
-      },
-    }];
-    const tree = renderer
-      .create(<DisplayCharactersPresentational {...props} />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+  // test('renders', () => {
+  //   const wrapper = shallow(<DisplayCharactersPresentational />);
+  //   expect(wrapper.exists()).toBe(true);
+  // });
+
+  it('DisplayCharactersPresentational snapshot', () => {
+    const wrapper = mount(
+      <DisplayCharactersPresentational {...props} />,
+    );
+    expect(wrapper).toMatchSnapshot();
   });
 });

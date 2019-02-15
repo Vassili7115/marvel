@@ -4,6 +4,7 @@ const initialState = {
   loading: false,
   characters: null,
   comics: null,
+  series: null,
   error: null,
 };
 
@@ -19,7 +20,14 @@ export default (state = initialState, action) => {
         ...state,
         loading: false,
         characters: action.payload.results,
+        // characters: {
+        //   results: action.payload.results,
+        //   current: action.payload.results,
+        //   nbElement: action.payload.results,
+        //   nbTotalElement: action.payload.results,
+        // },
         comics: action.payload.results,
+        series: action.payload.results,
       };
     case types.FETCH_ERROR:
       return {
