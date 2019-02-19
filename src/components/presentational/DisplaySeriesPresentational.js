@@ -58,14 +58,14 @@ export default class DisplaySeriesPresentational extends Component {
           </p>
           {offset > 0 && (
             <a href="#goToTop">
-              <button className="button-pagination" type="button" onClick={() => getList(option.characters, offset - 20)}>
+              <button className="button-pagination" type="button" onClick={() => getList(option.series, offset - 20)}>
                 <img src="/images/left-arrow.svg" alt="left arrow" />
               </button>
             </a>
           )}
           {offset <= total - 11 && (
             <a href="#goToTop">
-              <button className="button-pagination" type="button" onClick={() => getList(option.characters, offset + 20)}>
+              <button className="button-pagination" type="button" onClick={() => getList(option.series, offset + 20)}>
                 <img src="/images/right-arrow.svg" alt="right arrow" />
               </button>
             </a>

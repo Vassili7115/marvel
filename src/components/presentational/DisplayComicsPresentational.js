@@ -56,7 +56,7 @@ export default class DisplayComicsPresentational extends Component {
         <Grid className="container-button-pagination">
           {offset > 0 && (
             <a href="#goToTop">
-              <button className="button-pagination" type="button" onClick={() => getList(option.characters, offset - 20)}>
+              <button className="button-pagination" type="button" onClick={() => getList(option.comics, offset - 20)}>
                 <img src="/images/left-arrow.svg" alt="left arrow" />
               </button>
             </a>
@@ -66,7 +66,7 @@ export default class DisplayComicsPresentational extends Component {
           </p>
           {offset <= total - 11 && (
             <a href="#goToTop">
-              <button className="button-pagination" type="button" onClick={() => getList(option.characters, offset + 20)}>
+              <button className="button-pagination" type="button" onClick={() => getList(option.comics, offset + 20)}>
                 <img src="/images/right-arrow.svg" alt="right arrow" />
               </button>
             </a>
