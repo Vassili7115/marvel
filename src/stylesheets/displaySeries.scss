@@ -4,6 +4,17 @@
     justify-content: center;
 }
 
+.series-card {
+    margin: $spac-xs !important;
+    text-align: center;
+    padding-bottom: $spac-s;
+}
+
+.series-card:hover{
+    cursor: pointer;
+    transform: translate(0, -2px);
+}
+
 .container-series-picture {
     position: relative;
 }
@@ -26,14 +37,9 @@
     width: 100vw;
 }
 
-.series-card {
-    text-align: center;
-    padding-bottom: $spac-s;
-}
-
 .series-cover-title {
     color: $primary;
-    font-size: calc(0.7vh + 0.7vw);
+    font-size: 0.9rem;
     font-weight: bold;
 }
 
@@ -44,19 +50,25 @@
 }
 
 .container-button-pagination {
-    text-align: center;
     margin: $spac-s 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 .button-pagination {
-    background-color: $secondary;
+    background-color: white;
+    border: none;
     color: $tertiary;
     border-radius: 10%;
     outline : none;
     width: 70px;
     height: 50px;
-    margin: 0 $spac-xl;
+    cursor: pointer;
+    :active{
+        transform: translate(0, 1px);
+    }
     img{
-        width: 25%;
+        width: 55%;
     }
 }

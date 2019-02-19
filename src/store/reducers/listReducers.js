@@ -1,7 +1,7 @@
 import * as types from '../actions/typesActions';
 
 const initialState = {
-  loading: false,
+  loading: true,
   characters: null,
   offset: null,
   limit: null,

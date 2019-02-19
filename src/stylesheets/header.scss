@@ -31,6 +31,8 @@
         font-size: calc(0.8vh + 0.8vw);
     }
     a:hover{
-        border-bottom: 3px solid $secondary;
+        color: $secondary;
+        font-weight: bold;
+        // border-bottom: 3px solid $secondary;
     }
 }

@@ -4,6 +4,17 @@
     justify-content: center;
 }
 
+.comics-card {
+    margin: $spac-xs !important;
+    text-align: center;
+    padding-bottom: $spac-s;
+}
+
+.comics-card:hover{
+    cursor: pointer;
+    transform: translate(0, -2px);
+}
+
 .container-comics-picture {
     position: relative;
 }
@@ -23,17 +34,12 @@
 
 .comics-picture {
     height: 70%;
-    width: 100vw;
-}
-
-.comics-card {
-    text-align: center;
-    padding-bottom: $spac-s;
+    width: 100%;
 }
 
 .comics-cover-title {
     color: $primary;
-    font-size: calc(0.7vh + 0.7vw);
+    font-size: 0.9rem;
     font-weight: bold;
 }
 
@@ -44,19 +50,24 @@
 }
 
 .container-button-pagination {
-    text-align: center;
     margin: $spac-s 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 .button-pagination {
-    background-color: $secondary;
+    background-color: white;
+    border: none;
     color: $tertiary;
     border-radius: 10%;
     outline : none;
     width: 70px;
     height: 50px;
-    margin: 0 $spac-xl;
+    :active{
+        transform: translate(0, 1px);
+    }
     img{
-        width: 25%;
+        width: 55%;
     }
 }

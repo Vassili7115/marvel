@@ -4,6 +4,7 @@ import DisplaySeriesPresentational from '../presentational/DisplaySeriesPresenta
 import { increment, decrement } from '../../store/actions/counterActions';
 
 const mapStateToProps = state => ({
+  loading: state.list.loading,
   list: state.list.series,
   offset: state.list.offset,
   total: state.list.total,

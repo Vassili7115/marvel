@@ -4,6 +4,7 @@ import DisplayCharactersPresentational from '../presentational/DisplayCharacters
 import { increment, decrement } from '../../store/actions/counterActions';
 
 const mapStateToProps = state => ({
+  loading: state.list.loading,
   list: state.list.characters,
   offset: state.list.offset,
   total: state.list.total,
