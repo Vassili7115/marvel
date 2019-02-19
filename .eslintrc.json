@@ -12,7 +12,7 @@
 		"jest"
 	],
 	"rules": {
-		"no-console": [
+		"no-console":  [
 			"warn",
 			{
 				"allow": [

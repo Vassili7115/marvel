@@ -12,11 +12,10 @@ const getListSuccessed = data => ({ type: FETCH_SUCCESSED, payload: data });
 
 const getListError = error => ({ type: FETCH_ERROR, payload: error });
 
-export const getList = (option) => (disptach) => {
+export const getList = (option, offset) => (disptach) => {
   const ts = Date.now();
   const hash = md5(ts + API_PRIVATE_KEY + API_PUBLIC_KEY);
   const limit = 20;
-  const offset = 0;
   const url = `https://gateway.marvel.com/v1/public/${option}?apikey=${API_PUBLIC_KEY}&hash=${hash}&ts=${ts}&limit=${limit}&offset=${offset}`;
   disptach(getListPending());
   fetch(url)

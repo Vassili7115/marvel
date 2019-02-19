@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component Home snapshots 1`] = `
+<Home>
+  <div>
+    <div
+      className="container"
+    >
+      <div
+        className="item"
+      />
+      <div
+        className="item"
+      />
+      <div
+        className="item"
+      />
+      <div
+        className="item"
+      />
+      <div
+        className="item"
+      >
+        <div
+          className="text-box"
+        >
+          <a
+            href="/characters"
+          >
+            <span
+              className="text"
+            >
+              DISCOVER MARVEL
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        className="item"
+      />
+      <div
+        className="item"
+      />
+      <div
+        className="item"
+      />
+    </div>
+  </div>
+</Home>
+`;

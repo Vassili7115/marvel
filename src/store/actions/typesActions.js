@@ -1,3 +1,5 @@
 export const FETCH_PENDING = 'FETCH_PENDING';
 export const FETCH_SUCCESSED = 'FETCH_SUCCESSED';
 export const FETCH_ERROR = 'FETCH_ERROR';
+export const INCREMENT = 'INCREMENT';
+export const DECREMENT = 'DECREMENT';

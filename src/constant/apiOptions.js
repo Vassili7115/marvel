@@ -4,4 +4,5 @@ const option = {
   series: 'series',
 };
 
+
 export default option;

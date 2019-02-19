@@ -2,14 +2,14 @@ import React from 'react';
 import { mount, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
-import DisplayCharactersPresentational from './DisplayCharactersPresentational';
+import DisplayComicsPresentational from './DisplayComicsPresentational';
 
 configure({ adapter: new Adapter() });
 
 const props = {
   list: [{
     id: '1',
-    name: 'Iron Man',
+    title: 'Iron Man',
     thumbnail: {
       path: 'https://www.ludoviccareme.com/files/image_211_image_fr',
       extension: 'jpg',
@@ -18,10 +18,10 @@ const props = {
   getList: jest.fn(),
 };
 
-describe('DisplayCharactersPresentational component', () => {
-  it('DisplayCharactersPresentational snapshot', () => {
+describe('DisplayComicsPresentational component', () => {
+  it('DisplayComicsPresentational snapshot', () => {
     const wrapper = mount(
-      <DisplayCharactersPresentational {...props} />,
+      <DisplayComicsPresentational {...props} />,
     );
     expect(toJson(wrapper)).toMatchSnapshot();
   });

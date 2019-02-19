@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import listReducers from './listReducers';
+import list from './listReducers';
+import counter from './counterReducers';
 
 const rootReducer = combineReducers({
-  fetchCharacters: listReducers,
-  fetchComics: listReducers,
-  fetchSeries: listReducers,
+  list,
+  counter,
 });
 
 export default rootReducer;

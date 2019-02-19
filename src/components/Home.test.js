@@ -4,14 +4,14 @@ import toJson from 'enzyme-to-json';
 
 import Adapter from 'enzyme-adapter-react-16';
 
-import Header from './Header';
+import Home from './Home';
 
 configure({ adapter: new Adapter() });
 
-describe('Header snapshott', () => {
-  it('renders correctly', () => {
+describe('Home component', () => {
+  it('Home snapshots', () => {
     const wrapper = mount(
-      <Header />,
+      <Home />,
     );
     expect(toJson(wrapper)).toMatchSnapshot();
   });

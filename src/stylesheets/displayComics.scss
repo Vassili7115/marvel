@@ -28,6 +28,7 @@
 
 .comics-card {
     text-align: center;
+    padding-bottom: $spac-s;
 }
 
 .comics-cover-title {
@@ -40,4 +41,22 @@
     box-shadow: 0 26px 24px -15px rgba(0,0,0,0.5);
     max-width: 250px;
     max-height:320px;
+}
+
+.container-button-pagination {
+    text-align: center;
+    margin: $spac-s 0;
+}
+
+.button-pagination {
+    background-color: $secondary;
+    color: $tertiary;
+    border-radius: 10%;
+    outline : none;
+    width: 70px;
+    height: 50px;
+    margin: 0 $spac-xl;
+    img{
+        width: 25%;
+    }
 }
