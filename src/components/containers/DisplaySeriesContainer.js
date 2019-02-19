@@ -1,11 +1,10 @@
 import { connect } from 'react-redux';
 import { getList } from '../../store/actions/listActions';
-import DisplayComicsPresentational from '../presentational/DisplayComicsPresentational';
+import DisplaySeriesPresentational from '../presentational/DisplaySeriesPresentational';
 import { increment, decrement } from '../../store/actions/counterActions';
 
-
 const mapStateToProps = state => ({
-  list: state.list.comics,
+  list: state.list.series,
   offset: state.list.offset,
   total: state.list.total,
   limit: state.list.limit,
@@ -17,5 +16,4 @@ const mapDispatchToProps = dispatch => ({
   increment: () => dispatch(increment()),
   decrement: () => dispatch(decrement()),
 });
-
-export default connect(mapStateToProps, mapDispatchToProps)(DisplayComicsPresentational);
+export default connect(mapStateToProps, mapDispatchToProps)(DisplaySeriesPresentational);

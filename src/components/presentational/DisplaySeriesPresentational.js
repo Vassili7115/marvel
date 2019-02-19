@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import '../../stylesheets/displayComics.scss';
+import '../../stylesheets/displaySeries.scss';
 
 import Grid from '@material-ui/core/Grid';
 import LinearProgress from '@material-ui/core/LinearProgress';
@@ -9,22 +9,21 @@ import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 
 import option from '../../constant/apiOptions';
 
-export default class DisplayComicsPresentational extends Component {
+export default class DisplaySeriesPresentational extends Component {
   componentDidMount() {
     const { getList } = this.props;
-    getList(option.comics);
+    getList(option.series);
   }
-
 
   // handlePrevious = () => {
   //   const { getList, offset, decrement } = this.props;
-  //   getList(option.comics, offset - 20);
+  //   getList(option.series, offset - 20);
   //   decrement();
   // }
 
   // handleNext = () => {
   //   const { getList, offset, increment } = this.props;
-  //   getList(option.comics, offset + 20);
+  //   getList(option.series, offset + 20);
   //   increment();
   // }
 
@@ -41,19 +40,22 @@ export default class DisplayComicsPresentational extends Component {
     return (
       <div>
         <ScrollableAnchor id="goToTop"><div></div></ScrollableAnchor>
-        <Grid container className="container-display-comics">
-          <Grid className="container-comics-picture" item xs={12}>
-            <img className="comics-picture" src="/images/background-characters.jpg" alt="comics pictures" />
-            <h1 className="comics-title">Comics</h1>
+        <Grid container className="container-display-series">
+          <Grid className="container-series-picture" item xs={12}>
+            <img className="series-picture" src="/images/background-characters.jpg" alt="series pictures" />
+            <h1 className="series-title">series</h1>
           </Grid>
-          {list.map(comic => (
-            <Grid item xs={4} md={3} className="comics-card" key={comic.id}>
-              <img className="comics-cover" src={`${comic.thumbnail.path}/portrait_uncanny.${comic.thumbnail.extension}`} alt={comic.title} />
-              <p className="comics-cover-title">{comic.title.split(parenthese)}</p>
+          {list.map(serie => (
+            <Grid item xs={4} md={3} className="series-card" key={serie.id}>
+              <img className="series-cover" src={`${serie.thumbnail.path}/portrait_uncanny.${serie.thumbnail.extension}`} alt={serie.title} />
+              <p className="series-cover-title">{serie.title.split(parenthese)}</p>
             </Grid>
           ))}
         </Grid>
         <Grid className="container-button-pagination">
+          <p>
+            {`${offset / 20 + 1}/${Math.round(total / 20) + 1}`}
+          </p>
           {offset > 0 && (
             <a href="#goToTop">
               <button className="button-pagination" type="button" onClick={() => getList(option.characters, offset - 20)}>
@@ -61,9 +63,6 @@ export default class DisplayComicsPresentational extends Component {
               </button>
             </a>
           )}
-          <p>
-            {`${offset / 20 + 1}/${Math.round(total / 20) + 1}`}
-          </p>
           {offset <= total - 11 && (
             <a href="#goToTop">
               <button className="button-pagination" type="button" onClick={() => getList(option.characters, offset + 20)}>
@@ -77,14 +76,14 @@ export default class DisplayComicsPresentational extends Component {
   }
 }
 
-
-DisplayComicsPresentational.propTypes = {
+DisplaySeriesPresentational.propTypes = {
   list: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
+      title: PropTypes.string,
       thumbnail: PropTypes.shape({
         path: PropTypes.string,
-        name: PropTypes.string,
+        extension: PropTypes.string,
       }),
     }),
   ),

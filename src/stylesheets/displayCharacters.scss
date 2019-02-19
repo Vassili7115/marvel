@@ -52,3 +52,24 @@
     margin-left:1rem;
     font-size: calc(0.8vh + 0.8vw);
 }
+
+.container-button-pagination {
+    text-align: center;
+    margin: $spac-s 0;
+    display: flex;
+    justify-content: center;
+}
+
+.button-pagination {
+    background-color: $secondary;
+    color: $tertiary;
+    border-radius: 10%;
+    outline : none;
+    width: 70px;
+    height: 50px;
+    margin: 0 $spac-xl;
+    img{
+        width: 25%;
+    }
+}
+

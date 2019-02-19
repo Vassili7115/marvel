@@ -1,0 +1,62 @@
+@import './rules/color', './rules/font.scss', './rules/spaces.scss';
+
+.container-display-series {
+    justify-content: center;
+}
+
+.container-series-picture {
+    position: relative;
+}
+
+.series-title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: calc(2vh + 2vw);
+    color: $tertiary;
+    font-family: 'marvel';
+    letter-spacing: 3px;
+    margin-top:4%;
+}
+
+.series-picture {
+    height: 70%;
+    width: 100vw;
+}
+
+.series-card {
+    text-align: center;
+    padding-bottom: $spac-s;
+}
+
+.series-cover-title {
+    color: $primary;
+    font-size: calc(0.7vh + 0.7vw);
+    font-weight: bold;
+}
+
+.series-cover {
+    box-shadow: 0 26px 24px -15px rgba(0,0,0,0.5);
+    max-width: 250px;
+    max-height:320px;
+}
+
+.container-button-pagination {
+    text-align: center;
+    margin: $spac-s 0;
+}
+
+.button-pagination {
+    background-color: $secondary;
+    color: $tertiary;
+    border-radius: 10%;
+    outline : none;
+    width: 70px;
+    height: 50px;
+    margin: 0 $spac-xl;
+    img{
+        width: 25%;
+    }
+}

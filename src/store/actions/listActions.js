@@ -12,11 +12,11 @@ const getListSuccessed = data => ({ type: FETCH_SUCCESSED, payload: data });
 
 const getListError = error => ({ type: FETCH_ERROR, payload: error });
 
-export const getList = option => (disptach) => {
+export const getList = (option, offset) => (disptach) => {
   const ts = Date.now();
   const hash = md5(ts + API_PRIVATE_KEY + API_PUBLIC_KEY);
-  const limit = 40;
-  const url = `https://gateway.marvel.com/v1/public/${option}?apikey=${API_PUBLIC_KEY}&hash=${hash}&ts=${ts}&limit=${limit}`;
+  const limit = 20;
+  const url = `https://gateway.marvel.com/v1/public/${option}?apikey=${API_PUBLIC_KEY}&hash=${hash}&ts=${ts}&limit=${limit}&offset=${offset}`;
   disptach(getListPending());
   fetch(url)
     .then(res => res.json())
@@ -25,17 +25,3 @@ export const getList = option => (disptach) => {
 };
 
 export default 'getList';
-
-
-// export const getListComics = () => disptach => {
-//   const ts = Date.now();
-//   const hash = md5(ts + API_PRIVATE_KEY + API_PUBLIC_KEY);
-//   const option = 'comics' ;
-//   const limit = 40;
-//   const url = `https://gateway.marvel.com/v1/public/${option}?apikey=${API_PUBLIC_KEY}&hash=${hash}&ts=${ts}&limit=${limit}`;
-//   disptach(getListPending());
-//   fetch(url)
-//     .then(res => res.json())
-//     .then(data => disptach(getListSuccessed(data.data)))
-//     .catch(err => disptach(getListError(err)));
-// };
